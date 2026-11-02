@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.page-container {
+  /* Reference: ~1330px card on a 1725px canvas, about 77% width, centered */
+  width: 77%;
+  max-width: 1830px;
+  margin: 0 auto;
+  padding: 7.5vh 0 10vh; /* top gap like the reference, extra room at the bottom */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ui-card {
+  background: #ffffff;
+  border: 2px solid #c4c4c4;
+  border-radius: 22px;
+  /* soft offset shadow toward bottom-right, like the reference */
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+  padding: 2rem;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Reference ratio: ~1330 x 620 */
+.ui-card--wide {
+  min-height: 620px;
+  margin-bottom: 1.5rem; /* gap between the top card and the lower row */
+}
+
+/* Reference ratio: ~625 x 490 */
+.ui-card--half {
+  min-height: 490px;
+  height: 100%;
+}
+
+/* Stack cleanly on small screens */
+@media (max-width: 767.98px) {
+  .page-container {
+    width: 92%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .ui-card--wide {
+    min-height: 400px;
+    margin-bottom: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .ui-card--half {
+    min-height: 360px;
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MiniGame from "./components/minigame1.js";
-import background from "./img/background.png";
+import background from "./img/background1.jpg";
 
 class App extends Component {
   render() {

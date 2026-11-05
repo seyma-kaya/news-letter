@@ -4,13 +4,14 @@
   max-width: 1830px;
   margin: 0 auto;
   padding: 7.5vh 0 10vh; /* top gap like the reference, extra room at the bottom */
+  font-family: "MyFont", sans-serif;
 }
 
 .ui-card {
   background: #ffffff;
-  border: 2px solid #c4c4c4;
+  border: 1px solid #c4c4c4;
   border-radius: 22px;
-  /* soft offset shadow toward bottom-right, like the reference */
+  /* soft offset shadow toward bottom-right */
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
   padding: 2rem;
   overflow: hidden;

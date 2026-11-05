@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../style/minigame1.css"
 
 function MiniGame (){
     const [answer, setAnswer] = useState("");
@@ -21,14 +22,19 @@ function MiniGame (){
     }
 
         return (
-            <div>
-                <div>
+            <div className="d-flex flex-column align-items-center text-center">
+                <div className="mb-3" style={{ fontSize: "1.75rem" }}>
                     ask your question to my magic 8 ball
                 </div>
-                <div onClick={() => magicTime()}>
-                    meow
-                </div>
                 <div>
+                    <img
+                        src={require('../img/ball.png')}
+                        onClick={() => magicTime()}
+                        alt="magic 8 ball"
+                        style={{ width: "65%", maxWidth: "380px", cursor: "pointer" }}
+                    />
+                </div>
+                <div className="mt-3" style={{ fontSize: "1.5rem" }}>
                     {answer}
                 </div>
             </div>

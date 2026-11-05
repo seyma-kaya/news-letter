@@ -3,7 +3,7 @@ import MiniGame from "./components/minigame1.js";
 import Favorites from "./components/favorites.js";
 import Info from "./components/info.js";
 import background from "./img/background.jpg";
-import "./App.css";
+import "./style/App.css";
 
 class App extends Component {
   render() {
